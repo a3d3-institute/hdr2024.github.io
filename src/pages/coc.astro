@@ -1,0 +1,67 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Code-of-Conduct',
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- Content Widget **************** -->
+  
+    <Content
+      isReversed,
+      title='Code-of-Conduct'
+      subtitle='This is an event for learning, collaboration, and engagement in the scientific community. We value the participation of each member of the community and want everyone involved to have an enjoyable and fulfilling experience. Accordingly, all staff and participants are expected to show respect and courtesy to others throughout the event. <br><br> Everyone participating in this conference must adhere to the following Code of Conduct. This includes in-person and remote forms of participation. Organizers will enforce this code throughout the event.'
+      items={[
+        {
+          title: 'Be Respectful',
+          description: 'Be kind to others. Do not insult or put down other attendees. Respect the skills, goals, and experiences of all participants, especially if they are different from your own.',
+          icon: 'tabler:circle-number-1',
+        },
+        {
+          title: 'Listen to Understand',
+          description: 'In the spirit of education, collaboration, and inclusiveness, when one person talks, others listen.',
+          icon: 'tabler:circle-number-2',
+        },
+        {
+          title: 'Speak to be Understood',
+          description: 'We use lay terms and are patient with people who are not experts in our specific field. We are all learning, no matter who we are.',
+          icon: 'tabler:circle-number-3',
+        },
+        {
+          title: 'Ask for Clarification',
+          description: 'We are coming from many different backgrounds and may use terms/ acronyms for different circumstances. When in doubt, ask for clarification instead of making assumptions',
+          icon: 'tabler:circle-number-4',
+        },
+        {
+          title: 'Be Open and Beware of Blind Spots',
+          description: 'We welcome attendees from all backgrounds. This event is about increasing the overall amount of learning, partnership, and engagement in the HDR ecosystem. We do not know what we do not know. We are vigilant for differences among our experiences and positions.',
+          icon: 'tabler:circle-number-5',
+        },
+        {
+          title: 'Remember you are Awesome',
+          description: 'You have skills and experiences that are needed at this event. Do your best and believe in yourself.',
+          icon: 'tabler:circle-number-6',
+        },
+        {
+          title: 'No Harassment',
+          description: 'Harassment of any kind is not welcome at this event.  Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.',
+          icon: 'tabler:circle-number-7',
+        },
+        {
+          title: 'Problems',
+          description: 'If you believe you have experienced or witnessed misconduct in the conference setting, please take these steps: <br> <br> 1. Document the incident <br> 2. Tell someone you trust <br> 3. Report the incident to one of the organizers <br> <br> Participants violating these rules may be asked to leave the HDR conference at the sole discretion of the organizers. <br> <br> Thank you for helping make this a welcoming, friendly place for all.',
+          icon: 'tabler:circle-number-8',
+        },
+      ]}
+    image={{
+      src: 'src/assets/images/COC.png',
+      alt: 'COC Image',
+    }}    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Code-of-Conduct</h3>
+      </Fragment>
+    </Content>  
+  </Layout>

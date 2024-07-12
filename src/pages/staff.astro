@@ -1,0 +1,22 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Staff',
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- Content Widget **************** -->
+  
+    <Content
+      isReversed,
+      title='Administrative Staff'
+      items={[
+        {title: 'Tonya Ayers (UIUC)', icon: 'tabler:user'},
+        {title: 'Brandy Koebble (UIUC)', icon: 'tabler:user'},
+      ]}
+    >
+    </Content>  
+  </Layout>

@@ -1,0 +1,58 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Goals',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed,
+    title='Goals'
+    subtitle='The overaching goal of the HDR Ecosystem Conference series is to empower a coherent and sustainable HDR Ecosystem that is much more than the sum of its parts through synergistic activities and the sharing of experiences, perspectives, and planning'
+    items={[
+      {
+        title: '',
+        description: 'Build and strengthen productive, inclusive, and positive relationships within the HDR ecosystem and the broader data-intensive research community',
+        icon: 'tabler:circle-number-1',
+      },
+      {
+        title: '',
+        description: 'Provide a forum to share accomplishments, goals and plans of HDR ecosystem entities',
+        icon: 'tabler:circle-number-2',
+      },
+      {
+        title: '',
+        description: 'Assess current and planned cross-cutting activities that address shared challenges and seek new opportunities to sustain and grow the HDR ecosystem and advance data-intensive research',
+        icon: 'tabler:circle-number-3',
+      },
+      {
+        title: '',
+        description: 'Assess the landscape of institutes, projects and activities within data science, AI, industry and infrastructure to advance a vision of how the HDR ecosystem is an integral part of a broader coherent ecosystem of AI and data-intensive research',
+        icon: 'tabler:circle-number-4',
+      },
+      {
+        title: '',
+        description: 'Formally launch the HDR Machine Learning Challenge',
+        icon: 'tabler:circle-number-5',
+      },
+      {
+        title: '',
+        description: 'Develop an HDR Community Position Paper with outcomes from the conference and planned activities',
+        icon: 'tabler:circle-number-6',
+      },
+    ]}
+    image={{
+      src: 'src/assets/images/goals.png',
+      alt: 'HDR Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Goals of the 2024 Conference</h3>
+    </Fragment>
+  </Content>  
+</Layout>

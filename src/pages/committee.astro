@@ -1,0 +1,35 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Organizing Committee',
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- Content Widget **************** -->
+  
+    <Content
+      isReversed,
+      title='Organizing Committee'
+      items={[
+        {title: 'Tanya Berger-Wolf (OSU)', icon: 'tabler:user'},
+        {title: 'Karen Chen (UMBC)', icon: 'tabler:user'},
+        {title: 'Julia Gonski (SLAC)', icon: 'tabler:user'},
+        {title: 'Phil Harris (MIT)', icon: 'tabler:user'},
+        {title: 'Vandana Janeja (UMBC)', icon: 'tabler:user'},
+        {title: 'Paula Mabee (NEON)', icon: 'tabler:user'},
+        {title: 'Mohamed Mokbel (UMN)', icon: 'tabler:user'},
+        {title: 'Josephine Namayanja (UMBC)', icon: 'tabler:user'},
+        {title: 'Arnab Nandi (OSU)', icon: 'tabler:user'},
+        {title: 'Mark Neubauer (UIUC, Chair)', icon: 'tabler:user'},
+        {title: 'Anand Padmanabhan (UIUC)', icon: 'tabler:user'},
+        {title: 'Mark Neubauer (UIUC)', icon: 'tabler:user'},
+        {title: 'Eric Toberer (CU Mines)', icon: 'tabler:user'},
+        {title: 'Shaowen Wang (UIUC)', icon: 'tabler:user'},
+      ]}
+    >
+    </Content>  
+  </Layout>
+    

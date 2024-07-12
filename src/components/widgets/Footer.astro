@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon/components';
+import { SITE } from 'astrowind:config';
+import { getHomePermalink } from '~/utils/permalinks';
+
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+}
+
+interface Links {
+  title?: string;
+  links: Array<Link>;
+}
+
+export interface Props {
+  links: Array<Links>;
+  secondaryLinks: Array<Link>;
+  socialLinks: Array<Link>;
+  footNote?: string;
+  theme?: string;
+}
+
+const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+---
+<!-- <footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600"> -->
+<footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-no-repeat bg-transparent md:flex md:items-center md:justify-between md:p-6 dark:bg-transparent">
+    <span class="text-sm text-gray-500 sm:text-left dark:text-gray-400">Supported by award XXXX from the National Science Foundation. Hosted by the A3D3 Institute and the Illinois HEP Group</span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+        <img src="/src/assets/images/NSF_logo.png" alt="NSF Logo" width="80">
+      </li>
+      <li>
+        <img src="/src/assets/images/A3D3.png" alt="A3D3 Logo" width="80">
+      </li>
+      <li>
+        <img src="/src/assets/images/Illinois.png" alt="UIUC Logo" width="40">
+      </li>
+  </ul>
+</footer>

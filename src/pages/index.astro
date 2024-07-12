@@ -1,0 +1,30 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+const metadata = {
+  title: '2024 NSF HDR Ecosystem Conference',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero>
+    image={{ src: '~/assets/images/Splash.png', alt: 'Splash figure' }}
+    <Fragment slot="title">
+      <br><br><font color="#C9DFEC">2024 NSF HDR Ecosystem Conference</font><br><i><font color="#3B2F2F">Harvesting the Data Revolution</font></i>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline" color="#C9DFEC">
+        The 3rd annual conference of the NSF HDR Ecosystem will be held on the campus of the <span class="font-semibold"><font color="orange"><i>University of Illinois Urbana-Champaign</i></font></span> from the <span class="font-semibold">9<sup>th</sup> to the 12<sup>th</sup> of September 2024</span></span>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="flex flex-wrap h-[calc(100vh+74px)] bg-cover bg-no-repeat bg-[url('/src/assets/images/Splash.svg')]"></div>
+    </Fragment>
+
+  </Hero>
+</Layout>
