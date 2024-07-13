@@ -67,5 +67,7 @@ export const footerData = {
   socialLinks: [
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/a3d3-institute/hdr2024.github.io'},
   ],
+  links: [],
+  secondaryLinks: [],
   theme: 'dark'
 };

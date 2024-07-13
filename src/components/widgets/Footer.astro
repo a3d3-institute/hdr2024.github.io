@@ -25,7 +25,7 @@ export interface Props {
   theme?: string;
 }
 
-const { socialLinks = [], theme = 'dark' } = Astro.props;
+const { socialLinks = [], links = [], secondaryLinks = [], theme = 'dark' } = Astro.props;
 ---
 <footer class:list={[{ dark: theme === 'dark' }, 'fixed bottom-0 left-0 z-20 w-full p-4 bg-no-repeat bg-transparent md:flex md:items-center md:justify-between md:p-6 dark:bg-transparent']}>
     <span class="text-sm text-gray-500 sm:text-left dark:text-gray-400">Supported by award XXXX from the National Science Foundation. Hosted by the A3D3 Institute and the Illinois HEP Group</span>
