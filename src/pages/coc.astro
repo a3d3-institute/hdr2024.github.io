@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Content from '~/components/widgets/Content.astro';
+import COCImage from '~/assets/images/COC.png';
 
 const metadata = {
   title: 'Code-of-Conduct',
@@ -56,12 +57,10 @@ const metadata = {
           icon: 'tabler:circle-number-8',
         },
       ]}
-    image={{
-      src: 'src/assets/images/COC.png',
-      alt: 'COC Image',
-    }}    >
-      <Fragment slot="content">
+    image={{ src: COCImage.src, alt: 'COC Image'}}
+  >
+    <Fragment slot="content">
         <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Code-of-Conduct</h3>
-      </Fragment>
-    </Content>  
-  </Layout>
+    </Fragment>
+  </Content>  
+</Layout>

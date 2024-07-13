@@ -1,7 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { SITE } from 'astrowind:config';
-import { getHomePermalink } from '~/utils/permalinks';
+import NSFImage from '~/assets/images/NSF_logo.png';
+import A3D3Image from '~/assets/images/A3D3.png';
+import UIUCImage from '~/assets/images/Illinois.png';
+import ConfImage from '~/assets/images/2024_HDR_Ecosystem_Logo_Small.png';
 
 interface Link {
   text?: string;
@@ -23,20 +25,38 @@ export interface Props {
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const { socialLinks = [], theme = 'dark' } = Astro.props;
 ---
-<!-- <footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600"> -->
-<footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-no-repeat bg-transparent md:flex md:items-center md:justify-between md:p-6 dark:bg-transparent">
+<footer class:list={[{ dark: theme === 'dark' }, 'fixed bottom-0 left-0 z-20 w-full p-4 bg-no-repeat bg-transparent md:flex md:items-center md:justify-between md:p-6 dark:bg-transparent']}>
     <span class="text-sm text-gray-500 sm:text-left dark:text-gray-400">Supported by award XXXX from the National Science Foundation. Hosted by the A3D3 Institute and the Illinois HEP Group</span>
   <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
       <li>
-        <img src="/src/assets/images/NSF_logo.png" alt="NSF Logo" width="80">
+        <img src={NSFImage.src} alt="NSF Logo" width="80">
       </li>
       <li>
-        <img src="/src/assets/images/A3D3.png" alt="A3D3 Logo" width="80">
+        <img src={A3D3Image.src} alt="A3D3 Logo" width="80">
       </li>
       <li>
-        <img src="/src/assets/images/Illinois.png" alt="UIUC Logo" width="40">
+        <img src={UIUCImage.src} alt="UIUC Logo" width="40">
+      </li>
+      <li>
+        <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
+          {socialLinks.map(({ ariaLabel, href, text, icon }) => (
+            <li>
+              <a
+                class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                aria-label={ariaLabel}
+                href={href}
+              >
+                {icon && <Icon name={icon} class="w-5 h-5" />}
+                <Fragment set:html={text} />
+              </a>
+            </li>
+          ))}
+        </ul>
       </li>
   </ul>
+  <div class="text-sm mr-4 dark:text-muted">
+    <img src={ConfImage.src} alt="Conference Logo" width="180">
+  </div>
 </footer>

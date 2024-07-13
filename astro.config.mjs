@@ -33,7 +33,6 @@ export default defineConfig({
   output: 'static',
 
   site: 'https://github.com/a3d3-institute/hdr2024.github.io',
-  base: 'hdr2024.github.io',
 
   integrations: [
     tailwind({

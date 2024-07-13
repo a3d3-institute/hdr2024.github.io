@@ -1,6 +1,6 @@
 site:
   name: 2024 NSF HDR Conference
-  site: 'https://astrowind.vercel.app'
+  site: 'https://github.com/a3d3-institute/hdr2024.github.io'
   base: '/'
   trailingSlash: false
 
